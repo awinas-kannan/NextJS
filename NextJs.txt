@@ -219,7 +219,44 @@ In dev , prerendeing happens every time
  	http://localhost:3000/renderwithoutdata
 
  ** Static Generation with data
-    
+
+Some pages require fetching external data for pre-rendering. There are two scenarios, and one or both might apply. In each case, you can use these functions that Next.js provides:
+
+Your page content depends on external data: Use getStaticProps.
+Your page paths depend on external data: Use getStaticPaths (usually in addition to getStaticProps).
+
+
+getStaticProps : http://localhost:3000/users    
+Check:
+ -> npm run build
+ -> npm start
+ You ll not find logs:
+  -> console.log("Rendering getStaticProps")
+
+But if you simply do nom run dev
+you will se the -> console.log("Rendering getStaticProps")
+each tiem you hit  http://localhost:3000/users   
+
+18: Pages vs Components
+ Created a seperate component for user..
+
+19:  getStaticProps
+ https://nextjs.org/docs/pages/building-your-application/data-fetching/get-static-props
+
+ 1: 
+ * It runs only on the server side
+ * The function will never run client side
+ * The code you write inside getStaticProps wont even be included in JS bundle theat is sent to browser
+
+ 20 : Inspecting static generation builds
+
+ <<<<< Refer video >>>>>
+
+ 21 : Running Static GEneration build
+
+ <<<<< Refer video >>>>>
+
+
 
 
 
