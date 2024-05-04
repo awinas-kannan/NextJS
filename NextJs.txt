@@ -162,7 +162,67 @@ add 404.js
 
 ############################# Pre rendering & Data fetching intro
 
-14 : 
+https://nextjs.org/docs/pages/building-your-application/rendering
+
+14 : Pre rendering & Data fetching intro
+
+Types of Pre-rendering:
+ -> Static Genertaion
+ 	-> Without data
+ 	-> With data
+    -> Incremental static generation
+    -> Dynamic Parameters when fetching data
+    -> 
+-> Server side rendering
+
+Static Generation: The HTML is generated at build time and will be reused on each request.
+Server-side Rendering: The HTML is generated on each request.
+
+Client side data fetching .
+Combinind prerendering with client side data fetching
+
+15: Pre-rendering
+
+Comparing Traditional React app with Next js app
+
+Comparing the page source :
+ Inspect -> view source
+ React : only has div 
+ Next : Shows the whole file
+ By default , Next JS prerenders every page in application
+ Prerednder mean ?
+  -> Next JS generates HTMK for each page in advance instead of having it all done by client sise java script
+ 
+ Why Pre render ?
+  Improves Performance:
+
+  -> In React app , u need to wait for JS to be executed 
+  Perhaps fetch data from external api and then render it in UI
+  There is wait time for user
+  With Pre renderd page , the HTML is already generated and loads faster
+
+  Pre rendering Helps SEO:
+   -> 
+
+ 16: Static Site genreation:
+ https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation
+
+ If a page uses Static Generation, the page HTML is generated at build time. That means in production, the page HTML is generated when you run next build. This HTML will then be reused on each request. It can be cached by a CDN.
+
+In Next.js, you can statically generate pages with or without data. Let's take a look at each case.
+
+In dev , prerendeing happens every time
+ 
+ 17 - Static Generation with getStaticProps
+
+ ** Static Generation without data
+ 	http://localhost:3000/renderwithoutdata
+
+ ** Static Generation with data
+    
+
+
+
 
 
 
