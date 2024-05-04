@@ -8,6 +8,13 @@ function Home() {
     console.log('Placing your order')
     router.push('/product')
   }
+
+  const handleReplaceClick = () => {
+    console.log('Re Placing your order')
+    router.replace('/product')
+  }
+
+
   return (
     <>
       <h1>Welcome Home</h1>
@@ -20,6 +27,10 @@ function Home() {
         </li>
         <li>
           <button onClick={handleClick}>Place Order</button>
+        </li>
+
+        <li>
+          <button onClick={handleReplaceClick}>Replace Place Order</button>
         </li>
       </ul>
     </>

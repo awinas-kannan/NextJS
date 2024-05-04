@@ -141,11 +141,29 @@ Linking to dynamic paths :
 
 <Link>
 
-Imperative Routing : router.push('/about')
 
 ** Place Order
 
 Check about replace tag in <LINK>
 
 
-11: 
+11: Navifating programatically
+
+
+Imperative Routing : router.push('/about')
+ 	                 router.replace('/about')
+
+
+12: Custom 404 page
+
+add 404.js
+
+13 : Routing Summary
+
+############################# Pre rendering & Data fetching intro
+
+14 : 
+
+
+
+
