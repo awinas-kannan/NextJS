@@ -11,13 +11,17 @@ function Home() {
   return (
     <>
       <h1>Welcome Home</h1>
-      <Link href='/blog'>
-        Blog
-      </Link>
-      <Link href='/product'>
-        Products
-      </Link>
-      <button onClick={handleClick}>Place Order</button>
+      <ul>
+        <li>
+          <Link href='/blog'> Blog </Link>
+        </li>
+        <li>
+          <Link href='/product'> Products   </Link>
+        </li>
+        <li>
+          <button onClick={handleClick}>Place Order</button>
+        </li>
+      </ul>
     </>
   )
 }

@@ -26,6 +26,17 @@ function ProductList({ productId = 100 }) {
           Product {productId}
         </Link>
       </h2>
+
+      <h2>
+        <Link
+          href={{
+            pathname: '/product/[productIDinPath]',
+            query: { productIDinPath: productId },
+          }}
+        >
+          Product URI {productId}
+        </Link>
+      </h2>
     </>
   )
 }

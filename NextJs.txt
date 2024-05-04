@@ -62,5 +62,90 @@ Example: If you create pages/about.js that exports a React component like below,
 5 : Routing with pages
 
 http://localhost:3000/about
+http://localhost:3000/profile
+
+Index routes::
+
+The router will automatically route files named index to the root of the directory.
+
+pages/index.js → /
+pages/blog/index.js → /blog
+
+6: Nested Routes:
+
+The router supports nested files. If you create a nested folder structure, files will automatically be routed in the same way still.
+
+pages/blog/first-post.js → /blog/first-post
+pages/dashboard/settings/username.js → /dashboard/settings/username
 
 
+** http://localhost:3000/blog
+** http://localhost:3000/blog/first
+** http://localhost:3000/blog/second
+
+7: Pages with Dynamic Routes
+
+Dynamic Segments can be accessed from useRouter.
+
+Next.js supports pages with dynamic routes. For example, if you create a file called pages/posts/[id].js, then it will be accessible at posts/1, posts/2, etc.
+
+
+http://localhost:3000/product/1
+http://localhost:3000/product/sweater
+
+
+If sweater.js is avilabe then it wil be shown else [product].js index file will be shown
+
+  const router = useRouter()
+  const productId = router.query.productId
+
+
+8: Nested dynamic routing
+
+https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes
+
+http://localhost:3000/product/1/review/1
+
+9: Catch ALL routes
+
+Dynamic Segments can be extended to catch-all subsequent segments by adding an ellipsis inside the brackets [...segmentName].
+
+
+For example, pages/shop/[...slug].js will match /shop/clothes, but also /shop/clothes/tops, /shop/clothes/tops/t-shirts, and so on.
+
+Route	Example URL	params
+pages/shop/[...slug].js	/shop/a	{ slug: ['a'] }
+pages/shop/[...slug].js	/shop/a/b	{ slug: ['a', 'b'] }
+pages/shop/[...slug].js	/shop/a/b/c	{ slug: ['a', 'b', 'c'] }
+
+
+http://localhost:3000/ [To make this work aadd one more []. optional catch. ] : Else 400 will be thrown
+
+http://localhost:3000/docs/f1
+http://localhost:3000/docs/f1/c1
+http://localhost:3000/docs/f1/c1/awinas
+
+check console.log
+
+10 : Link Component Navigation
+
+https://nextjs.org/docs/pages/building-your-application/routing/linking-and-navigating
+
+The Next.js router allows you to do client-side route transitions between pages, similar to a single-page application.
+
+A React component called Link is provided to do this client-side route transition.
+
+Any <Link /> in the viewport (initially or through scroll) will be prefetched by default (including the corresponding data) for pages using Static Generation. The corresponding data for server-rendered routes is fetched only when the <Link /> is clicked.
+
+Linking to dynamic paths :
+
+<Link>
+
+Imperative Routing : router.push('/about')
+
+** Place Order
+
+Check about replace tag in <LINK>
+
+
+11: 
