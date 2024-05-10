@@ -304,9 +304,109 @@ each tiem you hit  http://localhost:3000/users
        create comments/index.js in api folder
        Add the logic to fetch data from data json
        create a comments page in pages folder
-       Create a button to load the comments.     
+       Create a button to load the comments.
+
+43 : API Post Request :
+     -> http://localhost:3000/comments
+
+     ->Create an input 
+     ->Add a submit button
+     ->Clicking on submit buttin shoud update the comments json stored in data
+     -> Creata an api
+     ->     
+     const comment = req.body.comment
+     const newComment = {
+      id: Date.now(),
+      text: comment
+    }
+    comments.push(newComment)
+    res.status(201).json(newComment)      
+
+
+ 44 : Dynamic API Routes
+
+     -> GET Request
+        Fetch data based on id :
+          if (req.method === 'GET') {
+			    const comment = comments.find(comment => comment.id === parseInt(commentId))
+			    res.status(200).json(comment)
+  		} 
+
+
+45:  Dynamic API Routes - Delete  		
+     -> Delete request
+ 		 -> Create an api that can acceept id
+ 		     http://localhost:3000/comments/1
+ 		 -> Create else condifion to handel DELETE method
+
+
+46:  Catch All API Routes
+    -> create a file named [[..params]].js {Optional catch all routes}
+
+    -> http://localhost:3000/api/awinas/kannan/m/r
+    -> response :
+    [
+		"awinas",
+		"kannan",
+		"m",
+		"r"
+	]	      
+
+    -> http://localhost:3000/api/awinas/kannan/m/r?name=awinas&inital=mr&dept=csk#1001
+    -> {
+	  name: 'awinas',
+	  inital: 'mr',
+	  dept: 'csk',
+	  params: [ 'awinas', 'kannan', 'm', 'r' ]
+	}
+
+	  console.log(req.query)
+	  const params = req.query.params
+	  console.log(params)
+	  const data = {
+	    query: req.query,
+	    url: req.url,
+	    hashValues: req.url.split('#')
+	  }
+  	 res.status(200).json(data)
+
+  	 To get he hash value in react component::
+  	 console.log(window.location.hash)
+
+  	 Please note that the hash value is not sent to the server when a request is made. It is purely for client-side navigation within the page.
+
+     Q : will we get # in spring boot ?
+     The reason is that the fragment identifier (the part after the "#") is not sent to the server by the browser. It is only used by the browser to navigate within the retrieved HTML document.
+
+	 If you need to access thate value after the "#" symbol on the server-side, you would need to modify your application to pass that value as a query parameter or as part of the path. For example, instead of using a URL like `http://example.com/mypage#value`, you could use `http://example.com/mypage?param=value` or `http://example.com/mypage/value`. Then, you can use Spring Boot's request mapping and request parameter annotations to access the value in your server-side code.
+
+ 47: APIs and rerendering:
+
+     -> Create a page [comment].js
+     -> Create getStaticPaths function that return a object
+     with path property
+     -> Create getStaticProps function
+        -> Dont call the api here
+        -> 
+
+48 : Api Routes Sumary
+    -> API routes mechanism is similar to page based routing mechanism
+    -> APis are associated with a route based on their file name
+    -> Every api route exposts a default function named as handler function
+    -> The handler function received req and response as parameters
+    -> Cater diff request types like GET and POST using req.method
+    -> Dynaic api routes
+       comments/1
+       comments/100
+    -> Catch all api routes [[...params]]
+    -> Handle delete
+    -> we should not use our own api routes for pre rendering content (This ll cause delay)
+  
+  ###### ###### ######We are done with Routing .... Pre rendering .... API routes.... ####### ######. #######
+
+
+**************************************************************************
 
 
 
-
-
+   

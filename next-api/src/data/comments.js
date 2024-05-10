@@ -12,7 +12,7 @@ export const comments = [
     text: 'This is the third comment'
   },
   {
-    id: 3,
+    id: 4,
     text: 'This is the Awinas\'s comment'
   }
 ]

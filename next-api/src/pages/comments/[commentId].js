@@ -1,6 +1,7 @@
 import { comments } from '../../data/comments'
 
 function Comment({ comment }) {
+
   return (
     <div>
       {comment.id}. {comment.text}
@@ -17,10 +18,12 @@ export async function getStaticProps(context) {
   const comment = comments.find(comment => comment.id === parseInt(commentId))
   console.log(comment)
 
-  /** Don't do this 
-  const response = await fetch(`http:localhost:3000/api/comments/${commentId}`)
-  const data = await response.json()
+  /** Don't do this  This will create additional round trip
+    const response = await fetch(`http:localhost:3000/api/comments/${commentId}`)
+    const comment = await response.json();
   */
+
+
 
   return {
     props: {
