@@ -256,9 +256,55 @@ each tiem you hit  http://localhost:3000/users
 
  <<<<< Refer video >>>>>
 
+ 
 
 
 
+
+
+
+
+**************************************************************************
+
+40 : Api routes Section Intro
+
+    -> API routes features
+    -> Create basic api in next.js
+       -> get
+       -> post
+       -> dynamic 
+       -> delete
+       -> catch all api routes
+
+41: Api routes       
+     -> Next js is full stack app
+     -> You can write FE code in react and apis that can be called by FE code
+     -> It allows you to create restful endpoints as part of next js app folder structure
+     -> with api folder you can create all the apis for your app
+     -> You can add business logic without needing to wrute any additional custom server code and without having to configure any api routes
+
+
+     From Doc:
+
+     https://nextjs.org/docs/pages/building-your-application/routing/api-routes
+     API routes provide a solution to build a public API with Next.js.
+
+	 Any file inside the folder pages/api is mapped to /api/* and will be treated as an API endpoint instead of a page. They are server-side only bundles and won't increase your client-side bundle size.
+
+	 http://localhost:3000/api
+	 http://localhost:3000/api/blog
+	 http://localhost:3000/api/blog/blog_1
+ 
+42 : API Get Request:
+     
+     -> http://localhost:3000/comments
+     -> Load Comments
+
+     Steps :
+       create comments/index.js in api folder
+       Add the logic to fetch data from data json
+       create a comments page in pages folder
+       Create a button to load the comments.     
 
 
 
