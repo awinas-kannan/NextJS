@@ -256,13 +256,86 @@ each tiem you hit  http://localhost:3000/users
 
  <<<<< Refer video >>>>>
 
+ 22 : Static Site Generation (SSG) with dynamic Parametes
+
+ 23 : SSG with getStaticPaths
+
+ 24 : Inspecting getStaticPaths Builds
+
+ 25 : Fetching paths for getStaticPaths
+
+ 26 : getStaticPaths fallback false
+
+ 27 : getStaticPaths fallback true
+
+ 28 : getStaticPaths fallback blocking
+
+ 29 : Incremental static regeneration (ISR)
+
+ 30 : Inspecting ISR builds
+
+ 31 : SSR- Server side rendering
+ Problems with Static Generation :
+  -> We cannot fetch data at request time
+  -> We dont get access to incomming request
+
+
+ https://nextjs.org/docs/pages/building-your-application/rendering/server-side-rendering
+ Also referred to as "SSR" or "Dynamic Rendering".
+ If a page uses Server-side Rendering, the page HTML is generated on each request.
+ To use Server-side Rendering for a page, you need to export an async function called getServerSideProps. This function will be called by the server on every request.
+ For example, suppose that your page needs to pre-render frequently updated data (fetched from an external API). You can write getServerSideProps which fetches this data and passes it to Page like below:
+  
+ As you can see, getServerSideProps is similar to getStaticProps, but the difference is that getServerSideProps is run on every request instead of on build time.
+ 
+ https://nextjs.org/docs/pages/building-your-application/data-fetching/get-server-side-props
+ 
+ http://localhost:3000/ssr/getServerSideProps
+
+ Important Points :
+  -> The code you write inside getServerSideProps will not be included in js bundle
+  -> It (getServerSideProps) runs in serverside and will never run in client side
+
+  -> Write server side code directly in getServerSideProps( Fetch data from external api / db/ fs module)
+
+  -> getServerSideProps will return an object and should contain a "props key"
+
+      return {
+        props:
+        {
+            repo
+        }
+    }
+
+  -> getServerSideProps can we writte in page not in component  
+ 
+ 32 : SSR with getServerSideProps
+ 
+  https://nextjs.org/docs/pages/building-your-application/data-fetching/get-server-side-props
+
+ 33 : SSR with dynamic paramenter
+
+ use context in getServerSideProps
+
+ http://localhost:3000/ssr/getServerSideProps/dynamicparam?postId=3
+
+ 34 : SSR getServerSideProps context
+
+ https://nextjs.org/docs/pages/api-reference/functions/get-server-side-props
+ 
+ -> req, res
+ -> set cookies
+ -> 
+
+ 35 : Inspecting SSR Builds
+
  
 
+ 36 : Client Side Data fetching
 
+ 37 : SWR for Client Side Data fetching
 
-
-
-
+ 38 : Prerendering + Client Side data fetching
 
 **************************************************************************
 
