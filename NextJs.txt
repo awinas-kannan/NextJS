@@ -381,6 +381,11 @@ each tiem you hit  http://localhost:3000/users
   http://localhost:3000/swr/dashboard-swr
 
  38 : Prerendering + Client Side data fetching
+ 
+ http://localhost:3000/events
+ http://localhost:3000/events?category=sports
+
+ 39 : Prerendering + Client Side data fetching Sumary
 
 **************************************************************************
 
