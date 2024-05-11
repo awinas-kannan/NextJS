@@ -329,6 +329,19 @@ each tiem you hit  http://localhost:3000/users
 
  35 : Inspecting SSR Builds
 
+ <<Refer Video>>
+
+ npm run build
+ ○  (Static)   prerendered as static content
+ ●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ ƒ  (Dynamic)  server-rendered on demand
+
+  ƒ /ssr/getServerSideProps               340 B          78.6 kB
+  ƒ /ssr/getServerSideProps/dynamicparam  326 B          78.6 kB
+
+  Check the dynamix page symbol 
+ 
+ No HTML Pages will be there for this in .next/server/pages//ssr/getServerSideProps
  
 
  36 : Client Side Data fetching
