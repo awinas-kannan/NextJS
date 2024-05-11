@@ -342,11 +342,43 @@ each tiem you hit  http://localhost:3000/users
   Check the dynamix page symbol 
  
  No HTML Pages will be there for this in .next/server/pages//ssr/getServerSideProps
- 
+
 
  36 : Client Side Data fetching
 
+ https://nextjs.org/docs/pages/building-your-application/data-fetching/client-side
+
+  npm install json-server
+
+  add -> "serve-json": "json-server --watch db.json --port 4000" 
+
+  npm run serve-json   
+
+  You can fetch the data using localhost:4000/
+
+  Endpoints:
+	http://localhost:4000/products
+	http://localhost:4000/news
+	http://localhost:4000/dashboard
+	http://localhost:4000/events 
+
+ 
+ http://localhost:3000/swr/dashboard
+
+   
  37 : SWR for Client Side Data fetching
+ 
+ npm install swr
+
+ SWR -> stale-while-revalidate
+ https://swr.vercel.app/
+
+ The name “SWR” is derived from stale-while-revalidate, a HTTP cache invalidation strategy popularized by HTTP RFC 5861(opens in a new tab). SWR is a strategy to first return the data from cache (stale), then send the fetch request (revalidate), and finally come with the up-to-date data.
+
+ With SWR, components will get a stream of data updates constantly and automatically.
+ And the UI will be always fast and reactive.
+
+  http://localhost:3000/swr/dashboard-swr
 
  38 : Prerendering + Client Side data fetching
 
