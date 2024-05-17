@@ -643,12 +643,8 @@ Check Chat GPT about the token expiry
        
       If you want to pass data such as an Access Token or User ID to the browser when using JSON Web Tokens, you can persist the data in the token when the jwt callback is called, then pass the data through to the browser in the session callback.
 
- 
-
-
        -> Adding unique id field to session object
        -> 
-
 
       callbacks -> jwt is called whenever the token is updated or created
 
