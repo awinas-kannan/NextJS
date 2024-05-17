@@ -586,6 +586,8 @@ Check Chat GPT about the token expiry
     signIn('')
 
 70 : Client Side Auth
+     -> Add Session Provider
+     -> use UseSession Hook 
 
 71 :    
 
