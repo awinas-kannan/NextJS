@@ -589,7 +589,17 @@ Check Chat GPT about the token expiry
      -> Add Session Provider
      -> use UseSession Hook 
 
-71 :    
+71 : Securing Client pages   
+  -> https://next-auth.js.org/getting-started/client#getsession
+
+  getSession()
+	Client Side: Yes
+	Server Side: No (See: getServerSession()
+	NextAuth.js provides a getSession() helper which should be called client side only to return the current active session.
+
+	On the server side, this is still available to use, however, we recommend using getServerSession going forward. The idea behind this is to avoid an additional unnecessary fetch call on the server side. For more information, please check out this issue. 
+  
+  --> Check how to access getSession from getServerSideProps
 
 **************************************************************************
    
