@@ -546,6 +546,8 @@ each tiem you hit  http://localhost:3000/users
 
 **************************************************************************
 
+This following Auth part reg next-auth is based on next-auth v3
+but i have updated to next-auth v4 in examples
 
 66 : Next JS Auth Intro
 
@@ -600,6 +602,11 @@ Check Chat GPT about the token expiry
 	On the server side, this is still available to use, however, we recommend using getServerSession going forward. The idea behind this is to avoid an additional unnecessary fetch call on the server side. For more information, please check out this issue. 
   
   --> Check how to access getSession from getServerSideProps
+
+  
+ 72 : Next Auth Provider 
+      <SessionProvider>
+      
 
 **************************************************************************
    
