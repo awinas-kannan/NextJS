@@ -606,7 +606,40 @@ Check Chat GPT about the token expiry
   
  72 : Next Auth Provider 
       <SessionProvider>
-      
+
+ 73 : Server Side Auth
+     -> Check video https://next-auth.js.org/configuration/nextjs
+     -> use getSession in getServerSideProps 
+     -> const session = await getSession(context)
+         -> getSession Return Promise
+         -> In serverside we need to pass context to getSession
+         -> In CLinet side its not needed
+     -> 
+
+    _app.js
+     ->  pageProps: { session, ...pageProps } }) {
+       pageprops comes from the getSereverSideProps
+     -> we are passing the session from blog page
+     -> We can use that in provider
+
+    -> useSession First check the session in provider
+    
+    -> Since we added session in blog alone , we get that value from provider for the blob pages
+    -> For other pages, use session in NavBar willl not get that value         
+ 
+ 74 : Securing pages Server side
+
+        redirect: {
+        destination: '/api/auth/signin?callbackUrl=http://localhost:3000/blog',
+        permanent: false
+
+ 75 : Securing API Routes
+
+ 76 : Connecting to DB
+
+ 77 : Callbacks
+
+
 
 **************************************************************************
    
