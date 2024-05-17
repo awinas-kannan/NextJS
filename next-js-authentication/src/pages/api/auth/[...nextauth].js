@@ -16,6 +16,7 @@ export const authOptions = {
       console.log('session user-> ', user)
       console.log('session token-> ', token)
       session.user.login = token.id;
+      session.accessToken = token.accessToken
       return session
     },
     async jwt({ token, user, account, profile, isNewUser }) {
@@ -27,6 +28,9 @@ export const authOptions = {
       if (profile) {
         console.log('Adding id in token -> ')
         token.id = profile.login
+      }
+      if (account) {
+        token.accessToken = account.access_token
       }
       return token
     }

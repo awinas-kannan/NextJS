@@ -638,6 +638,7 @@ Check Chat GPT about the token expiry
  76 : Connecting to DB
 
  77 : Callbacks
+      https://next-auth.js.org/configuration/callbacks
       Callbacks are asynchronous functions you can use to control what happens when an action is performed.
        
       If you want to pass data such as an Access Token or User ID to the browser when using JSON Web Tokens, you can persist the data in the token when the jwt callback is called, then pass the data through to the browser in the session callback.
