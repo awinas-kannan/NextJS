@@ -387,6 +387,8 @@ each tiem you hit  http://localhost:3000/users
 
  39 : Prerendering + Client Side data fetching Sumary
 
+ Check what is shalow routing
+ 
 **************************************************************************
 
 40 : Api routes Section Intro
@@ -528,8 +530,45 @@ each tiem you hit  http://localhost:3000/users
   ###### ###### ######We are done with Routing .... Pre rendering .... API routes.... ####### ######. #######
 
 
+************************************************************************** Styles
+
+49 : 
+
+50 : Global Style components
+  -> Add a style.css in styles folder
+  -> Import it in _app.js file
+
+51 : 
+
+52 :
+
+53 :
+
 **************************************************************************
 
 
+66 : Next JS Auth Intro
 
+67 : Authentication in Next Js
+     -> Client side auth
+     -> Server side auth
+     -> app routes auth
+     -> user data
+     -> Auth serivces like github & google
+     -> next-auth.js.org
+     ->
+
+68 : Next Auth Setup
+     -> https://next-auth.js.org/getting-started/example
+     -> npm install next-auth
+     -> To add NextAuth.js to a project create a file called [...nextauth].js in pages/api/auth
+     -> 
+
+69 : Sign in and Sign Out
+
+70 : Client Side Auth
+
+71 :    
+
+**************************************************************************
    
